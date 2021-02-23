@@ -3,8 +3,8 @@ package com.antonioleiva.data
 import com.antonioleiva.domain.Location
 
 class LocationsRepository(
-    private val locationPersistenceSource: LocationPersistenceSource,
-    private val deviceLocationSource: DeviceLocationSource
+        private val locationPersistenceSource: LocationPersistenceSource,
+        private val deviceLocationSource: DeviceLocationSource
 ) {
 
     fun getSavedLocations(): List<Location> = locationPersistenceSource.getPersistedLocations()
