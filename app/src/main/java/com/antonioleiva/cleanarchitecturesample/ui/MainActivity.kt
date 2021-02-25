@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.framework.FakeLocationSource
 import com.antonioleiva.cleanarchitecturesample.framework.InMemoryLocationPersistenceSource
-import com.antonioleiva.data.LocationsRepository
+import com.antonioleiva.data.repository.LocationsRepository
 import com.antonioleiva.usecases.GetLocations
 import com.antonioleiva.usecases.RequestNewLocation
 import kotlinx.android.synthetic.main.activity_main.*

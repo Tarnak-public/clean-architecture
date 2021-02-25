@@ -1,13 +1,13 @@
-package com.antonioleiva.data
+package com.antonioleiva.data.repository
 
 import com.antonioleiva.domain.Location
 
 class LocationsRepository(
-        private val locationPersistenceSource: LocationPersistenceSource,
-        private val deviceLocationSource: DeviceLocationSource
+    private val locationPersistenceSource: LocationPersistenceSource,
+    private val deviceLocationSource: DeviceLocationSource
 ) {
-
-    fun getSavedLocations(): List<Location> = locationPersistenceSource.getPersistedLocations()
+    fun getSavedLocations(): List<Location> =
+        locationPersistenceSource.getPersistedLocations()
 
     fun requestNewLocation(): List<Location> {
         val newLocation = deviceLocationSource.getDeviceLocation()

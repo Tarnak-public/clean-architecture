@@ -1,6 +1,6 @@
 package com.antonioleiva.cleanarchitecturesample.framework
 
-import com.antonioleiva.data.DeviceLocationSource
+import com.antonioleiva.data.repository.DeviceLocationSource
 import com.antonioleiva.domain.Location
 import java.util.*
 

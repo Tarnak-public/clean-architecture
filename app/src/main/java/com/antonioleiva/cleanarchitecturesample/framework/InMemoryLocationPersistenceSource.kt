@@ -1,6 +1,6 @@
 package com.antonioleiva.cleanarchitecturesample.framework
 
-import com.antonioleiva.data.LocationPersistenceSource
+import com.antonioleiva.data.repository.LocationPersistenceSource
 import com.antonioleiva.domain.Location
 
 class InMemoryLocationPersistenceSource : LocationPersistenceSource {
