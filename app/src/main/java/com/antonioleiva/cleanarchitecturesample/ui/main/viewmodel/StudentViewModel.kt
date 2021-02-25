@@ -1,10 +1,10 @@
-package com.mindorks.framework.mvvm.presentation.ui.main.viewmodel
+package com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel
 
 import androidx.lifecycle.*
+import com.antonioleiva.cleanarchitecturesample.ui.base.BaseViewModel
 import com.antonioleiva.data.db.entity.Student
-import com.mindorks.framework.mvvm.data.repository.RoomDBRepository
+import com.antonioleiva.data.repository.RoomDBRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.supercharge.fragmentfactoryandhilt.base.BaseViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -15,12 +15,18 @@ class StudentViewModel @Inject constructor(
 
     private val insertedId = MutableLiveData<Long>()
     private val error = MutableLiveData<String>()
-    var userFinalList: LiveData<MutableList<Student>> = MutableLiveData()
+
+//    var userFinalList: LiveData<MutableList<Student>> = MutableLiveData()
+//    private var userFinalList: MutableLiveData<MutableList<Student>> = MutableLiveData()
+
+    private val _userFinalList: MutableLiveData<MutableList<Student>> = MutableLiveData()
+    val userFinalList: LiveData<MutableList<Student>> = _userFinalList
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun fetchStudentData() {
         viewModelScope.launch {
-            userFinalList = roomDBRepository.fetchStudents()
+//            val userFinalListValue: MutableList<Student> = roomDBRepository.fetchStudents()
+            _userFinalList.postValue(roomDBRepository.fetchStudents())
         }
     }
 

@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.presentation.di.module
+package com.antonioleiva.cleanarchitecturesample.ui.module
 
 import androidx.fragment.app.Fragment
 import dagger.MapKey

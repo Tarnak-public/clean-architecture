@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.utils
+package com.antonioleiva.cleanarchitecturesample.utils
 
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 

@@ -1,15 +1,9 @@
-package com.mindorks.framework.mvvm.presentation.ui.main.viewmodel
+package com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
-import com.mindorks.framework.mvvm.data.model.User
-import com.mindorks.framework.mvvm.data.repository.ApiRepository
-import com.mindorks.framework.mvvm.utils.NetworkHelper
-import com.mindorks.framework.mvvm.utils.Resource
+import com.antonioleiva.data.repository.ApiRepository
+import com.antonioleiva.cleanarchitecturesample.utils.NetworkHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.supercharge.fragmentfactoryandhilt.base.BaseViewModel
-import kotlinx.coroutines.launch
+import com.antonioleiva.cleanarchitecturesample.ui.base.BaseViewModel
 import javax.inject.Inject
 
 @HiltViewModel

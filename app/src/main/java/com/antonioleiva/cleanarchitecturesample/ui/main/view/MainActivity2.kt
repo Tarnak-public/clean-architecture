@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.presentation.ui.main.view
+package com.antonioleiva.cleanarchitecturesample.ui.main.view
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -7,11 +7,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.ActivityMain2Binding
-import com.mindorks.framework.mvvm.presentation.ui.factory.DefaultFragmentFactoryEntryPoint
-import com.mindorks.framework.mvvm.presentation.ui.main.viewmodel.MainViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
-import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
+import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
+import com.antonioleiva.cleanarchitecturesample.ui.factory.DefaultFragmentFactoryEntryPoint
 import javax.inject.Inject
 
 /*

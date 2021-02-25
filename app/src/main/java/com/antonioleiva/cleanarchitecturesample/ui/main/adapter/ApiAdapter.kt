@@ -1,11 +1,11 @@
-package com.mindorks.framework.mvvm.presentation.ui.main.adapter
+package com.antonioleiva.cleanarchitecturesample.ui.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.antonioleiva.cleanarchitecturesample.databinding.ItemLayoutBinding
+import com.antonioleiva.data.model.User
 import com.bumptech.glide.Glide
-import com.mindorks.framework.mvvm.data.model.User
-import com.mindorks.framework.mvvm.databinding.ItemLayoutBinding
 
 class ApiAdapter(
     private val users: ArrayList<User>

@@ -1,4 +1,4 @@
-package io.supercharge.fragmentfactoryandhilt.navigator
+package com.antonioleiva.cleanarchitecturesample.ui.main.navigator
 
 import androidx.annotation.IdRes
 import androidx.navigation.NavController

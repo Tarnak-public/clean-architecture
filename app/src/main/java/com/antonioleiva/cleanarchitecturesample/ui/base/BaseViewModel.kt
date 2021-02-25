@@ -1,4 +1,4 @@
-package io.supercharge.fragmentfactoryandhilt.base
+package com.antonioleiva.cleanarchitecturesample.ui.base
 
 import androidx.lifecycle.ViewModel
 

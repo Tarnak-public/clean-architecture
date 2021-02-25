@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.utils
+package com.antonioleiva.cleanarchitecturesample.utils
 
 enum class Status {
     SUCCESS,

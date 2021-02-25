@@ -1,8 +1,8 @@
-package com.mindorks.framework.mvvm.presentation.di.module
+package com.antonioleiva.cleanarchitecturesample.ui.module
 
 import android.content.Context
 import com.antonioleiva.data.repository.RoomDBRepository
-import com.antonioleiva.data.db.StudentDB
+import com.antonioleiva.cleanarchitecturesample.framework.StudentDB
 import com.antonioleiva.data.db.StudentDao
 import dagger.Module
 import dagger.Provides

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/navDirectionApi"
-        android:name="com.mindorks.framework.mvvm.presentation.ui.main.view.ApiUsageFragment">
+        android:name="com.antonioleiva.cleanarchitecturesample.ui.main.view.ApiUsageFragment">
 
         <action
             android:id="@+id/action_navDirectionApi_to_navDirectionRooms"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/StudentInfoFragment"
-        android:name="com.mindorks.framework.mvvm.presentation.ui.main.view.StudentInfoFragment">
+        android:name="com.antonioleiva.cleanarchitecturesample.ui.main.view.StudentInfoFragment">
         <action
             android:id="@+id/action_StudentInfoFragment_to_StudentInfoListFragment"
             app:destination="@id/StudentInfoListFragment" />
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/StudentInfoListFragment"
-        android:name="com.mindorks.framework.mvvm.presentation.ui.main.view.StudentInfoListFragment">
+        android:name="com.antonioleiva.cleanarchitecturesample.ui.main.view.StudentInfoListFragment">
         <action
             android:id="@+id/action_StudentInfoListFragment_to_StudentInfoFragment"
             app:destination="@id/StudentInfoFragment" />
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/navDirectionEmpty"
-        android:name="com.mindorks.framework.mvvm.presentation.ui.main.view.EmptyFragment">
+        android:name="com.antonioleiva.cleanarchitecturesample.ui.main.view.EmptyFragment">
 
         <action
             android:id="@+id/action_navDirectionEmpty_to_navDirectionRooms"

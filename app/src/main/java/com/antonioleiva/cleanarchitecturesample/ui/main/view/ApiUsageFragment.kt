@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.presentation.ui.main.view
+package com.antonioleiva.cleanarchitecturesample.ui.main.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,15 +8,15 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mindorks.framework.mvvm.R
-import com.mindorks.framework.mvvm.data.model.User
-import com.mindorks.framework.mvvm.databinding.FragmentApiUsageBinding
-import com.mindorks.framework.mvvm.presentation.ui.main.adapter.ApiAdapter
-import com.mindorks.framework.mvvm.presentation.ui.main.viewmodel.ApiUsageViewModel
-import com.mindorks.framework.mvvm.utils.Status
+import com.antonioleiva.cleanarchitecturesample.R
+import com.antonioleiva.cleanarchitecturesample.databinding.FragmentApiUsageBinding
+import com.antonioleiva.data.model.User
+import com.antonioleiva.cleanarchitecturesample.ui.main.adapter.ApiAdapter
+import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.ApiUsageViewModel
+import com.antonioleiva.cleanarchitecturesample.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
-import io.supercharge.fragmentfactoryandhilt.base.BaseFragment
-import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
+import com.antonioleiva.cleanarchitecturesample.ui.base.BaseFragment
+import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
 import javax.inject.Inject
 
 @AndroidEntryPoint

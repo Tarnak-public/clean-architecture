@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.utils
+package com.antonioleiva.cleanarchitecturesample.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

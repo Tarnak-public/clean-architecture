@@ -1,10 +1,12 @@
-package com.antonioleiva.data.db
+package com.antonioleiva.cleanarchitecturesample.framework
 
 
+import android.content.Context
 import androidx.room.Database
+import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.antonioleiva.data.db.StudentDao
 import com.antonioleiva.data.db.entity.Student
-import javax.naming.Context
 
 @Database(entities = [Student::class], version = 1, exportSchema = false)
 abstract class StudentDB : RoomDatabase() {
