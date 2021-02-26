@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui.module
+package com.antonioleiva.cleanarchitecturesample.ui.module.di
 
 import androidx.fragment.app.Fragment
 import dagger.MapKey

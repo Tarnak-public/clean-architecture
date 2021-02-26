@@ -5,7 +5,9 @@ import com.antonioleiva.cleanarchitecturesample.ui.base.BaseViewModel
 import com.antonioleiva.data.db.entity.Student
 import com.antonioleiva.data.repository.RoomDBRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -21,13 +23,20 @@ class StudentViewModel @Inject constructor(
 
     private val _userFinalList: MutableLiveData<MutableList<Student>> = MutableLiveData()
     val userFinalList: LiveData<MutableList<Student>> = _userFinalList
+//    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+//    suspend fun fetchStudentData() {
+//        withContext(Dispatchers.IO) {
+//            viewModelScope.launch {
+//                _userFinalList.postValue(roomDBRepository.fetchStudents())
+//            }
+//        }
+//    }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    fun fetchStudentData() {
-        viewModelScope.launch {
-//            val userFinalListValue: MutableList<Student> = roomDBRepository.fetchStudents()
-            _userFinalList.postValue(roomDBRepository.fetchStudents())
-        }
+    suspend fun fetchStudentData() {
+            viewModelScope.launch {
+                _userFinalList.postValue(roomDBRepository.fetchStudents())
+            }
     }
 
     fun insertStudentInfo(student: Student) {

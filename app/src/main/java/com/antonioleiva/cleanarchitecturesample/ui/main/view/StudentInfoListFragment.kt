@@ -46,6 +46,7 @@ class StudentInfoListFragment @Inject constructor(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        this.lifecycle.addObserver(this.viewLifecycleOwner)
         this.lifecycle.addObserver(studentViewModel)
         binding.addStudentFloatingBtn.setOnClickListener {
             launchAddStudentFragment()

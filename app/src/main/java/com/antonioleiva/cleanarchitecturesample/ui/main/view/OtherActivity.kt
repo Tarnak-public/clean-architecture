@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.antonioleiva.cleanarchitecturesample.R
-import com.antonioleiva.cleanarchitecturesample.databinding.ActivityMain2Binding
+import com.antonioleiva.cleanarchitecturesample.databinding.ActivityOtherBinding
 import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
@@ -26,11 +26,11 @@ clean architecture better described
 https://antonioleiva.com/clean-architecture-android/
  */
 @AndroidEntryPoint
-class MainActivity2 : AppCompatActivity() {
+class OtherActivity : AppCompatActivity() {
     @Inject
     lateinit var navigator: Navigator
     private lateinit var navHostFragment: Fragment
-    private lateinit var binding: ActivityMain2Binding
+    private lateinit var binding: ActivityOtherBinding
     private val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +41,7 @@ class MainActivity2 : AppCompatActivity() {
         supportFragmentManager.fragmentFactory = entryPoint.getFragmentFactory()
 
         super.onCreate(savedInstanceState)
-        binding = ActivityMain2Binding.inflate(layoutInflater)
+        binding = ActivityOtherBinding.inflate(layoutInflater)
         setContentView(binding.root)
         navHostFragment =
             requireNotNull(supportFragmentManager.findFragmentById(R.id.fragmentContainer))

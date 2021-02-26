@@ -1,15 +1,19 @@
 package com.antonioleiva.cleanarchitecturesample.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.framework.FakeLocationSource
 import com.antonioleiva.cleanarchitecturesample.framework.InMemoryLocationPersistenceSource
+import com.antonioleiva.cleanarchitecturesample.ui.main.view.OtherActivity
 import com.antonioleiva.data.repository.LocationsRepository
 import com.antonioleiva.usecases.GetLocations
 import com.antonioleiva.usecases.RequestNewLocation
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), MainPresenter.View {
 
     private val locationsAdapter = LocationsAdapter()
@@ -36,6 +40,10 @@ class MainActivity : AppCompatActivity(), MainPresenter.View {
 
         newLocationBtn.setOnClickListener { presenter.newLocationClicked() }
 
+        startActivityBtn.setOnClickListener {
+            val intent = Intent(this, OtherActivity::class.java)
+            startActivity(intent)
+        }
         presenter.onCreate()
     }
 
