@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.ActivityOtherBinding
-import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.MainViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.OtherViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
 import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
@@ -31,7 +31,7 @@ class OtherActivity : AppCompatActivity() {
     lateinit var navigator: Navigator
     private lateinit var navHostFragment: Fragment
     private lateinit var binding: ActivityOtherBinding
-    private val mainViewModel: MainViewModel by viewModels()
+    private val otherViewModel: OtherViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val entryPoint =

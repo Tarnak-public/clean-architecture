@@ -1,36 +1,31 @@
 package com.antonioleiva.cleanarchitecturesample.ui
 
-import android.annotation.SuppressLint
-import androidx.recyclerview.widget.RecyclerView
-import android.view.View
+import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.antonioleiva.cleanarchitecturesample.R
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.view_location_item.*
-import kotlin.properties.Delegates
+import androidx.recyclerview.widget.RecyclerView
+import com.antonioleiva.cleanarchitecturesample.databinding.ViewLocationItemBinding
 
-class LocationsAdapter : RecyclerView.Adapter<LocationsAdapter.ViewHolder>() {
+class LocationsAdapter(
 
-    var items: List<Location> by Delegates.observable(emptyList()) { _, _, _ -> notifyDataSetChanged() }
+) : RecyclerView.Adapter<LocationsAdapter.DataViewHolder>() {
+    var items: List<Location> = TODO()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-        ViewHolder(parent.inflate(R.layout.view_location_item))
+    class DataViewHolder(private var binding: ViewLocationItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(location: Location) {
+            binding.locationCoordinates.text = location.coordinates
+            binding.locationDate.text = location.date
+        }
+    }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        DataViewHolder(
+            ViewLocationItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        )
+
+    override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         holder.bind(items[position])
     }
 
     override fun getItemCount(): Int = items.size
-
-    class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView),
-        LayoutContainer {
-
-        @SuppressLint("SetTextI18n")
-        fun bind(location: Location) {
-            with(location) {
-                locationCoordinates.text = coordinates
-                locationDate.text = date
-            }
-        }
-    }
 }

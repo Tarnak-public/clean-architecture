@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
+class OtherViewModel @Inject constructor(
     private val apiRepository: ApiRepository,
     private val networkHelper: NetworkHelper
 ) : ViewModel() {

@@ -13,6 +13,8 @@ interface StudentDao {
     suspend fun insert(student: Student): Long
 
     @Query("select * From student ORDER BY studentId ASC")
-    fun  fetch() : MutableList<Student>
-//    fun  fetch() : LiveData<MutableList<Student>>
+    suspend fun fetch(): MutableList<Student>
+
+//    @Query("select * From student ORDER BY studentId ASC")
+//    suspend fun fetchLiveData(): LiveData<MutableList<Student>>
 }

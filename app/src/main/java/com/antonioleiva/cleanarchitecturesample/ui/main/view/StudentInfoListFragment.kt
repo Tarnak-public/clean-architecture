@@ -10,27 +10,23 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.FragmentStudentListBinding
-import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.StudentViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.base.BaseFragment
 import com.antonioleiva.cleanarchitecturesample.ui.main.adapter.StudentAdapter
+import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
+import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.StudentViewModel
 import com.antonioleiva.cleanarchitecturesample.utils.replaceFragment
 import dagger.hilt.android.AndroidEntryPoint
-import com.antonioleiva.cleanarchitecturesample.ui.base.BaseFragment
-import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class StudentInfoListFragment @Inject constructor(
-    val navigator: Navigator
+    private val navigator: Navigator
 ) : BaseFragment(), LifecycleOwner {
     private lateinit var binding: FragmentStudentListBinding
     override val layoutId: Int = R.layout.fragment_student_list
     var mContainerId: Int = -1
     private var studentAdapter: StudentAdapter? = null
     private val studentViewModel: StudentViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,8 +42,8 @@ class StudentInfoListFragment @Inject constructor(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        this.lifecycle.addObserver(this.viewLifecycleOwner)
-        this.lifecycle.addObserver(studentViewModel)
+//        this.lifecycle.addObserver(studentViewModel)
+        fetchDataFromViewModel()
         binding.addStudentFloatingBtn.setOnClickListener {
             launchAddStudentFragment()
         }
@@ -56,7 +52,7 @@ class StudentInfoListFragment @Inject constructor(
 
     override fun onResume() {
         super.onResume()
-        fetchDataFromViewModel()
+
     }
 
     private fun launchAddStudentFragment() {
@@ -74,11 +70,11 @@ class StudentInfoListFragment @Inject constructor(
     }
 
     private fun fetchDataFromViewModel() {
-//         viewModel.fetchRoomData()
-        studentViewModel.userFinalList.observe(this
+        studentViewModel.userFinalList.observe(viewLifecycleOwner
+//        studentViewModel.fetchInsertedId().observe( this
         ) { t ->
-            println("Received UserInfo List $t")
-            studentAdapter?.refreshAdapter(t)
+            println("fetchData() Received UserInfo List $t")
+            studentAdapter?.refreshAdapter(studentViewModel.studentsList)
         }
     }
 }

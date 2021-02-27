@@ -9,6 +9,7 @@ import com.antonioleiva.data.db.entity.Student
 class StudentAdapter(
     var postList: ArrayList<Student>
 ) : RecyclerView.Adapter<StudentAdapter.DataViewHolder>() {
+
     class DataViewHolder(private var binding: StudentListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(model: Student) {
