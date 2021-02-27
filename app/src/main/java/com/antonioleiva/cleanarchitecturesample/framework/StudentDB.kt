@@ -9,7 +9,7 @@ import com.antonioleiva.data.db.StudentDao
 import com.antonioleiva.data.db.entity.Student
 import kotlinx.coroutines.CoroutineScope
 
-@Database(entities = [Student::class], version = 3, exportSchema = false)
+@Database(entities = [Student::class], version = 4, exportSchema = false)
 abstract class StudentDB : RoomDatabase() {
     /**
      * Connects the database to the DAO.

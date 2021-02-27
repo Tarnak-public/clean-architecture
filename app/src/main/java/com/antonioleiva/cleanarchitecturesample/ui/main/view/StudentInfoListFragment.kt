@@ -1,10 +1,11 @@
 package com.antonioleiva.cleanarchitecturesample.ui.main.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,11 +23,14 @@ import javax.inject.Inject
 class StudentInfoListFragment @Inject constructor(
     private val navigator: Navigator
 ) : BaseFragment(), LifecycleOwner {
+    private val tagDebug: String = "fetchData()"
     private lateinit var binding: FragmentStudentListBinding
     override val layoutId: Int = R.layout.fragment_student_list
     var mContainerId: Int = -1
     private var studentAdapter: StudentAdapter? = null
-    private val studentViewModel: StudentViewModel by viewModels()
+
+    //    private val studentViewModel: StudentViewModel by viewModels()
+    private val studentViewModel by activityViewModels<StudentViewModel>() //create singleton viewmodel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,6 +40,7 @@ class StudentInfoListFragment @Inject constructor(
         binding =
             FragmentStudentListBinding.inflate(layoutInflater, container, false)
         mContainerId = container?.id ?: -1
+
         return binding.root
     }
 
@@ -43,11 +48,25 @@ class StudentInfoListFragment @Inject constructor(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //        this.lifecycle.addObserver(studentViewModel)
-        fetchDataFromViewModel()
+        Log.d(tagDebug, "onViewCreated() StudentInfoListFragment $studentViewModel")
+        initAdapter()
+
+        addObservers()
+
         binding.addStudentFloatingBtn.setOnClickListener {
             launchAddStudentFragment()
         }
-        initAdapter()
+    }
+
+    private fun addObservers() {
+        studentViewModel.fetchDatabaseChanges().observe(viewLifecycleOwner) { t ->
+            studentAdapter?.refreshAdapter(t)
+        }
+
+//        studentViewModel.fetchInsertedId().observe(viewLifecycleOwner) { t ->
+//            Log.d(tagDebug, "Activity fetchInsertedId() $t")
+//            studentViewModel.rereadDatabase()
+//        }
     }
 
     override fun onResume() {
@@ -65,16 +84,6 @@ class StudentInfoListFragment @Inject constructor(
             layoutManager = LinearLayoutManager(context)
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
             adapter = studentAdapter
-        }
-
-    }
-
-    private fun fetchDataFromViewModel() {
-        studentViewModel.userFinalList.observe(viewLifecycleOwner
-//        studentViewModel.fetchInsertedId().observe( this
-        ) { t ->
-            println("fetchData() Received UserInfo List $t")
-            studentAdapter?.refreshAdapter(studentViewModel.studentsList)
         }
     }
 }

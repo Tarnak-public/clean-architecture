@@ -1,9 +1,11 @@
 package com.antonioleiva.cleanarchitecturesample.ui.main.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.ActivityOtherBinding
@@ -12,6 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
 import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
 import com.antonioleiva.cleanarchitecturesample.ui.factory.DefaultFragmentFactoryEntryPoint
+import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.StudentViewModel
 import javax.inject.Inject
 
 /*
@@ -27,11 +30,13 @@ https://antonioleiva.com/clean-architecture-android/
  */
 @AndroidEntryPoint
 class OtherActivity : AppCompatActivity() {
+    private val tagDebug: String = "fetchData()"
     @Inject
     lateinit var navigator: Navigator
     private lateinit var navHostFragment: Fragment
     private lateinit var binding: ActivityOtherBinding
     private val otherViewModel: OtherViewModel by viewModels()
+//    private val studentViewModel: StudentViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val entryPoint =
@@ -43,6 +48,9 @@ class OtherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOtherBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        Log.d(tagDebug, "OtherActivity onCreate() ")
+
         navHostFragment =
             requireNotNull(supportFragmentManager.findFragmentById(R.id.fragmentContainer))
         val navController = navHostFragment.findNavController()

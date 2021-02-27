@@ -15,6 +15,4 @@ interface StudentDao {
     @Query("select * From student ORDER BY studentId ASC")
     suspend fun fetch(): MutableList<Student>
 
-//    @Query("select * From student ORDER BY studentId ASC")
-//    suspend fun fetchLiveData(): LiveData<MutableList<Student>>
 }
