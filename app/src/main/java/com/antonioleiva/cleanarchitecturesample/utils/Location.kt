@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui
+package com.antonioleiva.cleanarchitecturesample.utils
 
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -17,10 +17,8 @@ private fun Date.toPrettifiedString(): String =
     SimpleDateFormat.getDateTimeInstance().run { format(this@toPrettifiedString) }
 
 private fun Double.toPrettifiedString(): String {
-
     val df = DecimalFormat("#.###")
     df.roundingMode = RoundingMode.CEILING
 
     return df.format(this)
-
 }

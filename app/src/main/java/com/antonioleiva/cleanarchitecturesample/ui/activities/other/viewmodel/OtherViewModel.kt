@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel
+package com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

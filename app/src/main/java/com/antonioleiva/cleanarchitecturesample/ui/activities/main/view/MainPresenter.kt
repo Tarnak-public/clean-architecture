@@ -1,5 +1,8 @@
-package com.antonioleiva.cleanarchitecturesample.ui
+package com.antonioleiva.cleanarchitecturesample.ui.activities.main.view
 
+
+import com.antonioleiva.cleanarchitecturesample.utils.Location
+import com.antonioleiva.cleanarchitecturesample.utils.toPresentationModel
 import com.antonioleiva.usecases.GetLocations
 import com.antonioleiva.usecases.RequestNewLocation
 import kotlinx.coroutines.Dispatchers

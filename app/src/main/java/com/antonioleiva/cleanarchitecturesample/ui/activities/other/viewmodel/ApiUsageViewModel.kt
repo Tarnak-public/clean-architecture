@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel
+package com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,7 +8,7 @@ import com.antonioleiva.data.repository.ApiRepository
 import com.antonioleiva.cleanarchitecturesample.utils.NetworkHelper
 import com.antonioleiva.cleanarchitecturesample.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.antonioleiva.cleanarchitecturesample.ui.base.BaseViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.shared.base.BaseViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

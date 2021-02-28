@@ -1,9 +1,10 @@
-package com.antonioleiva.cleanarchitecturesample.ui
+package com.antonioleiva.cleanarchitecturesample.ui.activities.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.antonioleiva.cleanarchitecturesample.databinding.ViewLocationItemBinding
+import com.antonioleiva.cleanarchitecturesample.utils.Location
 
 class LocationsAdapter(
 

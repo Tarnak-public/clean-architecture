@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui.main.adapter
+package com.antonioleiva.cleanarchitecturesample.ui.activities.other.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

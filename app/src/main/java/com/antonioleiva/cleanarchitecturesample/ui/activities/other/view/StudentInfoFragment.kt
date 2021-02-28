@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui.main.view
+package com.antonioleiva.cleanarchitecturesample.ui.activities.other.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,9 @@ import androidx.core.text.isDigitsOnly
 import androidx.fragment.app.activityViewModels
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.FragmentStudentInfoBinding
-import com.antonioleiva.cleanarchitecturesample.ui.base.BaseFragment
-import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
-import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.StudentViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.shared.base.BaseFragment
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator.Navigator
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel.StudentViewModel
 import com.antonioleiva.data.db.entity.Student
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

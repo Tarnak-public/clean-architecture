@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui.main.view
+package com.antonioleiva.cleanarchitecturesample.ui.activities.other.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.FragmentEmptyBinding
-import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.EmptyViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel.EmptyViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
-import com.antonioleiva.cleanarchitecturesample.ui.base.BaseFragment
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator.Navigator
+import com.antonioleiva.cleanarchitecturesample.ui.shared.base.BaseFragment
 import javax.inject.Inject
 
 @AndroidEntryPoint

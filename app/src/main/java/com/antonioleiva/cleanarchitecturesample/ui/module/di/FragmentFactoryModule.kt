@@ -1,10 +1,10 @@
 package com.antonioleiva.cleanarchitecturesample.ui.module.di
 
 import androidx.fragment.app.Fragment
-import com.antonioleiva.cleanarchitecturesample.ui.main.view.EmptyFragment
-import com.antonioleiva.cleanarchitecturesample.ui.main.view.ApiUsageFragment
-import com.antonioleiva.cleanarchitecturesample.ui.main.view.StudentInfoFragment
-import com.antonioleiva.cleanarchitecturesample.ui.main.view.StudentInfoListFragment
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.view.EmptyFragment
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.view.ApiUsageFragment
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.view.StudentInfoFragment
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.view.StudentInfoListFragment
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

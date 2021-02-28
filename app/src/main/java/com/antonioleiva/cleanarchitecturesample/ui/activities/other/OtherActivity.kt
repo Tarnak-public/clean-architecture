@@ -1,20 +1,18 @@
-package com.antonioleiva.cleanarchitecturesample.ui.main.view
+package com.antonioleiva.cleanarchitecturesample.ui.activities.other
 
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.ActivityOtherBinding
-import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.OtherViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel.OtherViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
-import com.antonioleiva.cleanarchitecturesample.ui.main.navigator.Navigator
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator.Navigator
 import com.antonioleiva.cleanarchitecturesample.ui.factory.DefaultFragmentFactoryEntryPoint
-import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.StudentViewModel
 import javax.inject.Inject
 
 /*

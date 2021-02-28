@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui.main.navigator
+package com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator
 
 import androidx.annotation.IdRes
 import androidx.navigation.NavController

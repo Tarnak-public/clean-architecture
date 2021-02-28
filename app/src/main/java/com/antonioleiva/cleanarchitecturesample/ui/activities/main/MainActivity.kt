@@ -1,9 +1,8 @@
-package com.antonioleiva.cleanarchitecturesample.ui
+package com.antonioleiva.cleanarchitecturesample.ui.activities.main
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,8 +10,10 @@ import com.antonioleiva.cleanarchitecturesample.databinding.ActivityMainBinding
 import com.antonioleiva.cleanarchitecturesample.databinding.ViewLocationItemBinding
 import com.antonioleiva.cleanarchitecturesample.framework.FakeLocationSource
 import com.antonioleiva.cleanarchitecturesample.framework.InMemoryLocationPersistenceSource
-import com.antonioleiva.cleanarchitecturesample.ui.main.view.OtherActivity
-import com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel.StudentViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.activities.main.adapter.LocationsAdapter
+import com.antonioleiva.cleanarchitecturesample.ui.activities.main.view.MainPresenter
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.OtherActivity
+import com.antonioleiva.cleanarchitecturesample.utils.Location
 import com.antonioleiva.data.repository.LocationsRepository
 import com.antonioleiva.usecases.GetLocations
 import com.antonioleiva.usecases.RequestNewLocation
@@ -52,8 +53,6 @@ class MainActivity : AppCompatActivity(), MainPresenter.View {
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
             adapter = locationsAdapter
         }
-//        recycler.adapter = locationsAdapter
-
         binding.newLocationBtn.setOnClickListener { presenter.newLocationClicked() }
 
         binding.startActivityBtn.setOnClickListener {

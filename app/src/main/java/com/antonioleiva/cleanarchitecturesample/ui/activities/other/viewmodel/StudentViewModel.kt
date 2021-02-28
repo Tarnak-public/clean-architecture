@@ -1,11 +1,11 @@
-package com.antonioleiva.cleanarchitecturesample.ui.main.viewmodel
+package com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.antonioleiva.cleanarchitecturesample.ui.base.BaseViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.shared.base.BaseViewModel
 import com.antonioleiva.data.db.entity.Student
 import com.antonioleiva.data.repository.RoomDBRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
