@@ -7,7 +7,6 @@ plugins {
 
 dependencies {
     implementation project(':domain')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     //Networking
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
@@ -17,7 +16,6 @@ dependencies {
 
     //Dagger
     implementation 'com.google.dagger:hilt-android:2.32-alpha'
-//    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
     kapt 'com.google.dagger:hilt-android-compiler:2.32-alpha'
     kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha03'
 

@@ -34,7 +34,6 @@ class OtherActivity : AppCompatActivity() {
     private lateinit var navHostFragment: Fragment
     private lateinit var binding: ActivityOtherBinding
     private val otherViewModel: OtherViewModel by viewModels()
-//    private val studentViewModel: StudentViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val entryPoint =

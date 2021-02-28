@@ -5,12 +5,14 @@ import com.antonioleiva.cleanarchitecturesample.utils.Location
 import com.antonioleiva.cleanarchitecturesample.utils.toPresentationModel
 import com.antonioleiva.usecases.GetLocations
 import com.antonioleiva.usecases.RequestNewLocation
+import dagger.hilt.android.scopes.ViewScoped
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.antonioleiva.domain.Location as DomainLocation
 
+@ViewScoped
 class MainPresenter(
     private var view: View?,
     private val getLocations: GetLocations,
