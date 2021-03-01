@@ -11,5 +11,4 @@ data class Student (
     val lName : String,
     val standard : String,
     val age : Int
-
 )

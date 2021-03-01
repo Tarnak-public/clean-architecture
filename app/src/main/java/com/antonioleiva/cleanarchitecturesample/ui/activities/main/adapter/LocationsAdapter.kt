@@ -9,7 +9,7 @@ import com.antonioleiva.cleanarchitecturesample.utils.Location
 class LocationsAdapter(
 
 ) : RecyclerView.Adapter<LocationsAdapter.DataViewHolder>() {
-    var items: List<Location> = TODO()
+    var items: List<Location> = emptyList()
 
     class DataViewHolder(private var binding: ViewLocationItemBinding) :
         RecyclerView.ViewHolder(binding.root) {

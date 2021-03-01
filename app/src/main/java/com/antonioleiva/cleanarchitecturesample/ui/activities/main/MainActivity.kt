@@ -29,29 +29,27 @@ class MainActivity : AppCompatActivity(), MainPresenter.View {
     private val locationsAdapter = LocationsAdapter()
     private val presenter: MainPresenter
 
-    init {
-        val locationsRepository =
-            LocationsRepository(InMemoryLocationPersistenceSource(), FakeLocationSource())
-        presenter = MainPresenter(
-            this,
-            GetLocations(locationsRepository),
-            RequestNewLocation(locationsRepository)
-        )
-    }
-
-//    private val presenter: MainPresenter
 //    init {
-//
-//        // This would be done by a dependency injector in a complex App
-//        val persistence = InMemoryLocationPersistenceSource()
-//        val deviceLocation = FakeLocationSource()
-//        val locationsRepository = LocationsRepository(persistence, deviceLocation)
+//        val locationsRepository =
+//            LocationsRepository(InMemoryLocationPersistenceSource(), FakeLocationSource())
 //        presenter = MainPresenter(
 //            this,
 //            GetLocations(locationsRepository),
 //            RequestNewLocation(locationsRepository)
 //        )
 //    }
+
+    init {
+        // This would be done by a dependency injector in a complex App
+        val persistence = InMemoryLocationPersistenceSource()
+        val deviceLocation = FakeLocationSource()
+        val locationsRepository = LocationsRepository(persistence, deviceLocation)
+        presenter = MainPresenter(
+            this,
+            GetLocations(locationsRepository),
+            RequestNewLocation(locationsRepository)
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
