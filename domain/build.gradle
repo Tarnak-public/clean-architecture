@@ -2,4 +2,6 @@ apply plugin: 'java-library'
 apply plugin: 'org.jetbrains.kotlin.jvm'
 
 dependencies {
+    //Rx kotlin/java
+    implementation "io.reactivex.rxjava3:rxkotlin:3.0.1"
 }

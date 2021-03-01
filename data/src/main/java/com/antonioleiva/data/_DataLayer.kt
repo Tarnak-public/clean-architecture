@@ -1,6 +1,6 @@
 package com.antonioleiva.data
 
-class DataLayer {
+class _DataLayer {
     /*
 All data needed for the application comes from this layer through a UserRepository implementation
 (the interface is in the domain layer) that uses a Repository Pattern with a strategy that,

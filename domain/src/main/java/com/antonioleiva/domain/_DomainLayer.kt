@@ -1,6 +1,6 @@
 package com.antonioleiva.domain
 
-class DomainLayer {
+class _DomainLayer {
     /*
 Business rules here: all the logic happens in this layer.
 Regarding the android project, you will see all the interactors (use cases) implementations here as well.
