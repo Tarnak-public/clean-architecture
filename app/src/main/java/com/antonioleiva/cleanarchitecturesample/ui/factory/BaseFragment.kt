@@ -1,4 +1,4 @@
-package com.antonioleiva.cleanarchitecturesample.ui.shared.base
+package com.antonioleiva.cleanarchitecturesample.ui.factory
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

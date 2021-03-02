@@ -1,7 +1,7 @@
 package com.antonioleiva.cleanarchitecturesample.ui.module.di
 
 import com.antonioleiva.data.api.ApiHelper
-import com.antonioleiva.data.api.ApiHelperImpl
+import com.antonioleiva.cleanarchitecturesample.framework.api.ApiHelperImpl
 import com.antonioleiva.data.api.ApiService
 
 import dagger.Module

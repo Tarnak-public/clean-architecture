@@ -106,7 +106,7 @@ class FileManager {
      * Write a value to a user preferences file.
      *
      * @param context [android.content.Context] to retrieve android user preferences.
-     * @param preferenceFileName A file name reprensenting where data will be written to.
+     * @param preferenceFileName A file name representing where data will be written to.
      * @param key A string for the key that will be used to retrieve the value in the future.
      * @param value A long representing the value to be inserted.
      */

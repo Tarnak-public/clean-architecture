@@ -15,7 +15,7 @@ import com.antonioleiva.cleanarchitecturesample.ui.activities.other.adapter.ApiA
 import com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel.ApiUsageViewModel
 import com.antonioleiva.cleanarchitecturesample.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
-import com.antonioleiva.cleanarchitecturesample.ui.shared.base.BaseFragment
+import com.antonioleiva.cleanarchitecturesample.ui.factory.BaseFragment
 import com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator.Navigator
 import javax.inject.Inject
 

@@ -10,7 +10,7 @@ import com.antonioleiva.cleanarchitecturesample.databinding.FragmentEmptyBinding
 import com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel.EmptyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator.Navigator
-import com.antonioleiva.cleanarchitecturesample.ui.shared.base.BaseFragment
+import com.antonioleiva.cleanarchitecturesample.ui.factory.BaseFragment
 import javax.inject.Inject
 
 @AndroidEntryPoint

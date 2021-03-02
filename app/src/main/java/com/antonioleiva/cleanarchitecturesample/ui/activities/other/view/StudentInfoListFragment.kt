@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.FragmentStudentListBinding
-import com.antonioleiva.cleanarchitecturesample.ui.shared.base.BaseFragment
+import com.antonioleiva.cleanarchitecturesample.ui.factory.BaseFragment
 import com.antonioleiva.cleanarchitecturesample.ui.activities.other.adapter.StudentAdapter
 import com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator.Navigator
 import com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel.StudentViewModel

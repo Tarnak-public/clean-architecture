@@ -8,7 +8,7 @@ import com.antonioleiva.data.repository.ApiRepository
 import com.antonioleiva.cleanarchitecturesample.utils.NetworkHelper
 import com.antonioleiva.cleanarchitecturesample.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.antonioleiva.cleanarchitecturesample.ui.shared.base.BaseViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.factory.BaseViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
