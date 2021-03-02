@@ -1,8 +1,8 @@
 package com.antonioleiva.cleanarchitecturesample.ui.module.di
 
-import com.antonioleiva.data.api.ApiHelper
-import com.antonioleiva.cleanarchitecturesample.framework.api.ApiHelperImpl
-import com.antonioleiva.data.api.ApiService
+import com.antonioleiva.data.api.ApiUsers
+import com.antonioleiva.cleanarchitecturesample.framework.api.ApiUsersImpl
+import com.antonioleiva.data.api.ApiUsersService
 
 import dagger.Module
 import dagger.Provides
@@ -17,11 +17,11 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class ApplicationModule {
-    private val BASE_URL = "https://5e510330f2c0d300147c034c.mockapi.io/"
+    private val BASE_URL_USERS = "https://5e510330f2c0d300147c034c.mockapi.io/"
     private val DEBUG = false
 
     @Provides
-    fun provideBaseUrl() = BASE_URL
+    fun provideBaseUsersUrl() = BASE_URL_USERS
 
     @Provides
     @Singleton
@@ -50,10 +50,10 @@ class ApplicationModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+    fun provideApiUsersService(retrofit: Retrofit): ApiUsersService = retrofit.create(ApiUsersService::class.java)
 
     @Provides
     @Singleton
-    fun provideApiHelper(apiHelper: ApiHelperImpl): ApiHelper = apiHelper
+    fun provideApiUsers(apiUsers: ApiUsersImpl): ApiUsers = apiUsers
 
 }

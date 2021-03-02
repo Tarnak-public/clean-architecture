@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.antonioleiva.cleanarchitecturesample.utils.NetworkHelper
 import com.antonioleiva.data.model.User
-import com.antonioleiva.data.repository.ApiRepository
+import com.antonioleiva.data.repository.ApiUsersRepository
 import com.antonioleiva.cleanarchitecturesample.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class OtherViewModel @Inject constructor(
-    private val apiRepository: ApiRepository,
+    private val apiUsersRepository: ApiUsersRepository,
     private val networkHelper: NetworkHelper
 ) : ViewModel() {
 
@@ -31,7 +31,7 @@ class OtherViewModel @Inject constructor(
         viewModelScope.launch {
             _users.postValue(Resource.loading(null))
             if (networkHelper.isNetworkConnected()) {
-                apiRepository.getUsers().let {
+                apiUsersRepository.getUsers().let {
                     if (it.isSuccessful) {
                         _users.postValue(Resource.success(it.body()))
                     } else _users.postValue(Resource.error(it.errorBody().toString(), null))
