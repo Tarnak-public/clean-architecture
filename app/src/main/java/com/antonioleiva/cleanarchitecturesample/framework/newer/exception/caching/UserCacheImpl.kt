@@ -16,13 +16,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.antonioleiva.cleanarchitecturesample.framework.caching
+package com.antonioleiva.cleanarchitecturesample.framework.newer.exception.caching
 
 import android.content.Context
 import com.antonioleiva.cleanarchitecturesample.utils.FileManager
 import com.antonioleiva.cleanarchitecturesample.utils.Serializer
-import com.antonioleiva.data.cache.UserCache
-import com.antonioleiva.data.exception.UserNotFoundException
+import com.antonioleiva.data.newer.cache.UserCache
 import com.antonioleiva.data.newer.entity.UserEntity
 import com.antonioleiva.domain.newer.executor.ThreadExecutor
 import io.reactivex.rxjava3.core.Observable

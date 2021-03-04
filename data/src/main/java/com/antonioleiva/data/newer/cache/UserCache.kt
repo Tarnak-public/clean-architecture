@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.antonioleiva.data.cache
+package com.antonioleiva.data.newer.cache
 
 import com.antonioleiva.data.newer.entity.UserEntity
 import io.reactivex.rxjava3.core.Observable

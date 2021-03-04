@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.antonioleiva.cleanarchitecturesample.ui.mapper
+package com.antonioleiva.cleanarchitecturesample.framework.newer.mapper
 
-import com.antonioleiva.cleanarchitecturesample.ui.model.UserModel
+import com.antonioleiva.cleanarchitecturesample.framework.newer.model.UserModel
 import com.antonioleiva.domain.newer.User
 import java.util.*
 import javax.inject.Inject

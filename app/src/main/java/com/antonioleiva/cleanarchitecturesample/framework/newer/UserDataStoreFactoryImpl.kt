@@ -13,11 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.antonioleiva.cleanarchitecturesample.framework
+package com.antonioleiva.cleanarchitecturesample.framework.newer
 
 import android.content.Context
-import com.antonioleiva.cleanarchitecturesample.framework.api.RestApiImpl
-import com.antonioleiva.data.cache.UserCache
+import com.antonioleiva.data.newer.cache.UserCache
 import com.antonioleiva.data.newer.mapper.UserEntityJsonMapper
 import com.antonioleiva.data.newer.net.RestApi
 import com.antonioleiva.data.newer.repository.datasource.CloudUserDataStore

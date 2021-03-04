@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.antonioleiva.data.exception;
+package com.antonioleiva.data.newer.exception;
 
 /**
  * Exception throw by the application when a there is a network connection exception.

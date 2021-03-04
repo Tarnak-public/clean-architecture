@@ -1,6 +1,6 @@
 package com.antonioleiva.usecases
 
-class TestingLayer {
+class _TestingLayer {
     /*
 Presentation Layer: used android instrumentation and espresso for integration and functional testing.
 Domain Layer: JUnit plus mockito for unit tests was used here.

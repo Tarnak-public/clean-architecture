@@ -16,12 +16,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.antonioleiva.cleanarchitecturesample.framework.exception
+package com.antonioleiva.cleanarchitecturesample.framework.newer.exception
 
 import android.content.Context
 import com.antonioleiva.cleanarchitecturesample.R
-import com.antonioleiva.data.exception.NetworkConnectionException
-import com.antonioleiva.data.exception.UserNotFoundException
+import com.antonioleiva.data.newer.exception.NetworkConnectionException
+import com.antonioleiva.data.newer.exception.UserNotFoundException
 
 /**
  * Factory used to create error messages from an Exception as a condition.

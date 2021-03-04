@@ -1,9 +1,9 @@
-package com.antonioleiva.cleanarchitecturesample.framework.api
+package com.antonioleiva.cleanarchitecturesample.framework.newer
 
 import android.content.Context
 import android.net.ConnectivityManager
-import com.antonioleiva.cleanarchitecturesample.framework.api.ApiConnection.Companion.createGET
-import com.antonioleiva.data.exception.NetworkConnectionException
+import com.antonioleiva.cleanarchitecturesample.framework.newer.ApiConnection.Companion.createGET
+import com.antonioleiva.data.newer.exception.NetworkConnectionException
 import com.antonioleiva.data.newer.entity.UserEntity
 import com.antonioleiva.data.newer.mapper.UserEntityJsonMapper
 import com.antonioleiva.data.newer.net.RestApi
@@ -33,7 +33,11 @@ class RestApiImpl(context: Context?, userEntityJsonMapper: UserEntityJsonMapper?
                         emitter.onError(NetworkConnectionException())
                     }
                 } catch (e: Exception) {
-                    emitter.onError(NetworkConnectionException(e.cause))
+                    emitter.onError(
+                        NetworkConnectionException(
+                            e.cause
+                        )
+                    )
                 }
             } else {
                 emitter.onError(NetworkConnectionException())
@@ -53,7 +57,11 @@ class RestApiImpl(context: Context?, userEntityJsonMapper: UserEntityJsonMapper?
                         emitter.onError(NetworkConnectionException())
                     }
                 } catch (e: Exception) {
-                    emitter.onError(NetworkConnectionException(e.cause))
+                    emitter.onError(
+                        NetworkConnectionException(
+                            e.cause
+                        )
+                    )
                 }
             } else {
                 emitter.onError(NetworkConnectionException())

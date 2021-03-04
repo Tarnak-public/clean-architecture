@@ -15,7 +15,7 @@
  */
 package com.antonioleiva.data.newer.repository.datasource
 
-import com.antonioleiva.data.cache.UserCache
+import com.antonioleiva.data.newer.cache.UserCache
 import com.antonioleiva.data.newer.entity.UserEntity
 import io.reactivex.rxjava3.core.Observable
 

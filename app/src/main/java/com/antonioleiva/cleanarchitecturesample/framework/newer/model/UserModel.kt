@@ -13,33 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.antonioleiva.data.exception;
-
-
-import com.antonioleiva.domain.newer.exception.ErrorBundle;
+package com.antonioleiva.cleanarchitecturesample.framework.newer.model
 
 /**
- * Wrapper around Exceptions used to manage errors in the repository.
+ * Class that represents a user in the presentation layer.
  */
-class RepositoryErrorBundle implements ErrorBundle {
+class UserModel(val userId: Int) {
+    var coverUrl: String? = null
+    var fullName: String? = null
+    var email: String? = null
+    var description: String? = null
+    var followers = 0
 
-  private final Exception exception;
-
-  RepositoryErrorBundle(Exception exception) {
-    this.exception = exception;
-  }
-
-  @Override
-  public Exception getException() {
-    return exception;
-  }
-
-  @Override
-  public String getErrorMessage() {
-    String message = "";
-    if (this.exception != null) {
-      message = this.exception.getMessage();
-    }
-    return message;
-  }
 }
