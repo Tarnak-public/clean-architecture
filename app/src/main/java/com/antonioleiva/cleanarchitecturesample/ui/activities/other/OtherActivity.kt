@@ -8,11 +8,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.antonioleiva.cleanarchitecturesample.R
 import com.antonioleiva.cleanarchitecturesample.databinding.ActivityOtherBinding
+import com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator.Navigator
 import com.antonioleiva.cleanarchitecturesample.ui.activities.other.viewmodel.OtherViewModel
+import com.antonioleiva.cleanarchitecturesample.ui.factory.DefaultFragmentFactoryEntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
-import com.antonioleiva.cleanarchitecturesample.ui.activities.other.navigator.Navigator
-import com.antonioleiva.cleanarchitecturesample.ui.factory.DefaultFragmentFactoryEntryPoint
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
 /*
@@ -29,6 +32,7 @@ https://antonioleiva.com/clean-architecture-android/
 @AndroidEntryPoint
 class OtherActivity : AppCompatActivity() {
     private val tagDebug: String = "fetchData()"
+
     @Inject
     lateinit var navigator: Navigator
     private lateinit var navHostFragment: Fragment
@@ -52,6 +56,10 @@ class OtherActivity : AppCompatActivity() {
             requireNotNull(supportFragmentManager.findFragmentById(R.id.fragmentContainer))
         val navController = navHostFragment.findNavController()
         navigator.navController = navController
+
+        Observable.just("value")
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
     }
 
     override fun onBackPressed() {

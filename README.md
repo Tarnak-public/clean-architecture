@@ -20,3 +20,7 @@ nice gfx:
 [clean arch3](https://github.com/Tarnak-public/AndroidCleanArchitectureDemo)
 
 [clean arch4](https://antonioleiva.com/clean-architecture-android/)
+
+[clean architecture_DESCRIPTIVE](https://rubygarage.org/blog/clean-android-architecture)
+
+[clean architecture_BETTER?](https://rubygarage.org/blog/clean-android-architecture)
