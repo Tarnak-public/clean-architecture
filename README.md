@@ -24,3 +24,5 @@ nice gfx:
 [clean architecture_DESCRIPTIVE](https://rubygarage.org/blog/clean-android-architecture)
 
 [clean architecture_BETTER?](https://rubygarage.org/blog/clean-android-architecture)
+
+[clean architecture_better_description_of](https://www.linkedin.com/pulse/dependency-injection-clean-architecture-ahmed-adel-ismail)
